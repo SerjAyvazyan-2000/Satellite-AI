@@ -48,6 +48,7 @@
     font-size: 12px;
     background: rgba(255, 255, 255, 1);
     margin-top: 3px;
+    transition: .3s;
 
 }
 
@@ -63,6 +64,9 @@
 
 .menu-list-link:hover {
     color: rgba(163, 48, 203, 1);
+}
+.menu-list-link:hover i {
+    background: rgba(163, 48, 203, 1);
 }
 
 .header-actions {

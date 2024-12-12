@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let elem = document.querySelector('.reviews-body');
     let msnry = new Masonry( elem, {
         itemSelector: '.reviews-item',
-        columnWidth: 200,
-        gutter: 3,
+        columnWidth: 20,
+        gutter: 20,
         percentPosition: true,
 
     });
@@ -94,7 +94,6 @@ function toggleActiveState(item) {
         }
     });
 
-    // Переключаем активный класс только для выбранного элемента
     item.classList.toggle('active');
 }
 
@@ -111,10 +110,8 @@ document.querySelectorAll('.often-asks-item').forEach(item => {
 document.querySelectorAll('.range-input').forEach((sliderEl) => {
     const valueDisplay = document.querySelector(sliderEl.getAttribute('data-value'));
 
-    // Инициализация текущих значений на старте
     updateSlider(sliderEl, valueDisplay);
 
-    // Добавляем слушатель на изменение
     sliderEl.addEventListener('input', () => updateSlider(sliderEl, valueDisplay));
 });
 
@@ -123,8 +120,29 @@ function updateSlider(slider, valueDisplay) {
     valueDisplay.textContent = tempSliderValue;
 
     const progress = (tempSliderValue / slider.max) * 100;
-    // background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
 
 
     slider.style.background = `linear-gradient(to right, #8A3EDF ${progress}%, #ccc ${progress}%)`;
 }
+
+
+document.querySelectorAll('.range').forEach(block => {
+
+
+    function rangeEnter() {
+        if (block) {
+            block.classList.add('active');
+        }
+
+    }
+
+    function rangeEnd() {
+
+
+    }
+
+    block.addEventListener('mouseenter', rangeEnter);
+    block.addEventListener('mouseleave', rangeEnd);
+
+});
+
