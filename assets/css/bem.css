@@ -264,13 +264,7 @@
     height: 395px;
 }
 
-.transform-text-picture img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
+
 
 .transform-text-tools {
     margin-top: 30px;
@@ -354,7 +348,9 @@
 .advantages-item-img {
     margin-top: 20px;
 }
-
+.transform-picture-desktop{
+    object-fit: cover;
+}
 .advantages-sub-width {
     max-width: 300px;
 }
@@ -793,8 +789,7 @@
 
 @media (max-width: 1200px) {
     .transform-text-picture {
-        max-width: 500px;
-        height: 350px;
+        margin: 0 auto;
     }
 
     .trust-body {
@@ -829,6 +824,11 @@
 
     .transform-text-body {
         gap: 25px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .transform-text-info {
+        max-width: 100%;
     }
 }
 
@@ -842,14 +842,8 @@
         flex-direction: column-reverse;
     }
 
-    .transform-text-body {
-        flex-direction: column;
-        align-items: stretch;
-    }
 
-    .transform-text-info {
-        max-width: 100%;
-    }
+
 
     .suitable-text-item {
         min-height: 100%;
