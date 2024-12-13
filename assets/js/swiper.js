@@ -43,6 +43,7 @@ let generatorSwiper = new Swiper(".music-generate-swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
+    loop: true,
     // autoplay:true,
     initialSlide: 3,
 

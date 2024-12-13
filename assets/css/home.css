@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-.hero-main-title span {
+.gradient-text {
     color: rgba(163, 48, 203, 1);
 }
 
@@ -324,6 +324,13 @@
     .audio-main-title {
         max-width: 260px;
 
+    }
+    .gradient-text  {
+        background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
     }
 
     .audio-wrap-mobile {
