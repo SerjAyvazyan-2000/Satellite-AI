@@ -1,3 +1,5 @@
+
+
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const header = document.querySelector('.header');
@@ -56,6 +58,8 @@ window.addEventListener('scroll', function() {
 
     }
 });
+
+
 
 
 
@@ -146,3 +150,8 @@ document.querySelectorAll('.range').forEach(block => {
 
 });
 
+
+
+const scrollbar = Scrollbar.init(document.querySelector(".wrapper"), {
+    damping: 0.08,
+});
